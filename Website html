@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Untold Beauty Adventures | Tanzania Safaris, Kilimanjaro & Zanzibar</title>
+
+  <meta name="description"
+        content="Untold Beauty Adventures offers Kilimanjaro and Mount Meru trekking, Tanzania wildlife safaris, Zanzibar beach holidays, cultural tours, day trips and professional travel logistics.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #f8f6f0;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(35, 48, 31, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 7%;
+    }
+
+    .logo {
+      color: #e7d7a5;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    nav ul li a:hover {
+      color: #e0c27b;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      min-height: 650px;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e4c878;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .buttons {
+      margin-top: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 27px;
+      margin: 7px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #c8a85d;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #a88945;
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #333;
+    }
+
+    /* INTRO */
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #30412d;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #666;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      background: white;
+    }
+
+    .intro h2 {
+      color: #30412d;
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .intro-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    /* SERVICES */
+    .services {
+      background: #f1eee5;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card h3 {
+      color: #30412d;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* WHY US */
+    .why-us {
+      background: #30412d;
+      color: white;
+    }
+
+    .why-us .section-title h2 {
+      color: #e6d29b;
+    }
+
+    .why-us .section-title p {
+      color: #ddd;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
+
+    .feature {
+      padding: 20px;
+    }
+
+    .feature .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      color: #e6d29b;
+    }
+
+    /* DESTINATIONS */
+    .destinations {
+      background: white;
+    }
+
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .destination {
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .destination img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .destination:hover img {
+      transform: scale(1.08);
+    }
+
+    .destination-text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 25px 15px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.85));
+      color: white;
+    }
+
+    .destination-text h3 {
+      font-size: 23px;
+    }
+
+    /* CTA */
+    .cta {
+      background:
+        linear-gradient(rgba(31,46,28,0.85), rgba(31,46,28,0.85)),
+        url("https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=2000&q=80")
+        center/cover;
+      text-align: center;
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1e281b;
+      color: white;
+      padding: 50px 8% 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+
+    footer h3 {
+      color: #e6d29b;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      color: #ccc;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer ul li {
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #e6d29b;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #465040;
+      padding-top: 20px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .destination-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 60px 5%;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .cards,
+      .features,
+      .destination-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">UNTOLD BEAUTY ADVENTURES</div>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Experiences</a></li>
+    <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>
+      Discover the <span>Untold Beauty</span> of Tanzania
+    </h1>
+
+    <p>
+      Authentic adventures, unforgettable journeys and meaningful
+      experiences across Tanzania and East Africa.
+    </p>
+
+    <div class="buttons">
+      <a href="#services" class="btn btn-primary">
+        Explore Our Adventures
+      </a>
+
+      <a href="#contact" class="btn btn-outline">
+        Plan Your Journey
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="intro" id="about">
+
+  <div>
+
+    <h2>Welcome to Untold Beauty Adventures</h2>
+
+    <p>
+      Untold Beauty Adventures is a Tanzania-based travel and adventure
+      company dedicated to creating authentic, safe and memorable
+      experiences for travelers from around the world.
+    </p>
+
+    <p>
+      From the breathtaking summit of Mount Kilimanjaro to the wild
+      landscapes of Tanzania's national parks and the tropical beaches
+      of Zanzibar, we connect travelers with the natural beauty,
+      culture and people of East Africa.
+    </p>
+
+    <p>
+      Our services include mountain trekking, wildlife safaris,
+      Zanzibar beach holidays, cultural experiences, day trips and
+      professional travel logistics.
+    </p>
+
+    <a href="#contact" class="btn btn-primary">
+      Start Your Adventure
+    </a>
+
+  </div>
+
+  <div class="intro-image">
+
+    <img
+      src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1200&q=85"
+      alt="Tanzania Safari Adventure">
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+  <div class="section-title">
+
+    <h2>Our Travel Experiences</h2>
+
+    <p>
+      Explore Tanzania through carefully planned adventures designed
+      around your interests, time and travel goals.
+    </p>
+
+  </div>
+
+
+  <div class="cards">
+
+    <!-- KILIMANJARO -->
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1527489377706-5bf97e608852?auto=format&fit=crop&w=1000&q=80"
+        alt="Mount Kilimanjaro">
+
+      <div class="card-content">
+
+        <h3>Mount Kilimanjaro Trekking</h3>
+
+        <p>
+          Experience the adventure of a lifetime climbing Africa's
+          highest mountain. We organize trekking experiences with
+          professional mountain guides, porters, equipment support,
+          logistics and carefully planned itineraries.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- MERU -->
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80"
+        alt="Mountain Adventure">
+
+      <div class="card-content">
+
+        <h3>Mount Meru Trekking</h3>
+
+        <p>
+          Discover the spectacular landscapes of Mount Meru through
+          guided trekking adventures, offering beautiful scenery,
+          wildlife encounters and an authentic mountain experience.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- SAFARI -->
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80"
+        alt="Tanzania Wildlife Safari">
+
+      <div class="card-content">
+
+        <h3>Wildlife Safaris</h3>
+
+        <p>
+          Explore Tanzania's incredible wildlife on professionally
+          organized game drives. Experience the landscapes and wildlife
+          of destinations such as Serengeti, Ngorongoro and Tarangire.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ZANZIBAR -->
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1000&q=80"
+        alt="Zanzibar Beach">
+
+      <div class="card-content">
+
+        <h3>Zanzibar Beach Holidays</h3>
+
+        <p>
+          Relax on the beautiful beaches of Zanzibar while discovering
+          the island's history, culture, marine life and tropical
+          atmosphere.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- CULTURE -->
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=80"
+        alt="African Culture">
+
+      <div class="card-content">
+
+        <h3>Cultural Tours</h3>
+
+        <p>
+          Meet local communities and discover Tanzania's traditions,
+          food, history, crafts and everyday life through meaningful
+          cultural experiences.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- DAY TRIPS -->
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=80"
+        alt="Tanzania Day Trip">
+
+      <div class="card-content">
+
+        <h3>Day Trips & Excursions</h3>
+
+        <p>
+          Make the most of your time in Tanzania with flexible day
+          trips including waterfalls, hot springs, nature experiences,
+          local villages and other memorable excursions.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section class="why-us">
+
+  <div class="section-title">
+
+    <h2>Why Travel With Us?</h2>
+
+    <p>
+      We focus on responsible tourism, authentic experiences and
+      professional organization from the beginning of your journey
+      to the end.
+    </p>
+
+  </div>
+
+
+  <div class="features">
+
+    <div class="feature">
+
+      <div class="icon">🏔️</div>
+
+      <h3>Local Expertise</h3>
+
+      <p>
+        Local knowledge and experience to help you discover Tanzania
+        beyond the ordinary.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="icon">🧭</div>
+
+      <h3>Professional Planning</h3>
+
+      <p>
+        Carefully organized trips with attention to logistics,
+        schedules and traveler needs.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="icon">🌍</div>
+
+      <h3>Authentic Experiences</h3>
+
+      <p>
+        Travel experiences that connect you with Tanzania's nature,
+        culture and communities.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="icon">🤝</div>
+
+      <h3>Personal Service</h3>
+
+      <p>
+        We work with travelers to create journeys that match their
+        interests, budget and available time.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DESTINATIONS -->
+<section class="destinations" id="destinations">
+
+  <div class="section-title">
+
+    <h2>Explore Tanzania</h2>
+
+    <p>
+      From high mountains and wildlife-rich savannahs to tropical
+      islands and vibrant local communities.
+    </p>
+
+  </div>
+
+
+  <div class="destination-grid">
+
+    <div class="destination">
+
+      <img
+        src="https://images.unsplash.com/photo-1527489377706-5bf97e608852?auto=format&fit=crop&w=1000&q=80"
+        alt="Kilimanjaro">
+
+      <div class="destination-text">
+        <h3>Kilimanjaro</h3>
+        <p>Climb Africa's highest mountain.</p>
+      </div>
+
+    </div>
+
+
+    <div class="destination">
+
+      <img
+        src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80"
+        alt="Safari">
+
+      <div class="destination-text">
+        <h3>Tanzania Safari</h3>
+        <p>Experience Africa's wildlife.</p>
+      </div>
+
+    </div>
+
+
+    <div class="destination">
+
+      <img
+        src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1000&q=80"
+        alt="Zanzibar">
+
+      <div class="destination-text">
+        <h3>Zanzibar</h3>
+        <p>Discover tropical island beauty.</p>
+      </div>
+
+    </div>
+
+
+    <div class="destination">
+
+      <img
+        src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80"
+        alt="Tanzania Culture">
+
+      <div class="destination-text">
+        <h3>Culture</h3>
+        <p>Meet Tanzania's people and traditions.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CALL TO ACTION -->
+<section class="cta" id="contact">
+
+  <h2>Your Tanzanian Adventure Starts Here</h2>
+
+  <p>
+    Whether you dream of standing on the summit of Kilimanjaro,
+    watching wildlife in the Serengeti, exploring Mount Meru,
+    relaxing in Zanzibar or discovering Tanzanian culture,
+    Untold Beauty Adventures is ready to help you plan your journey.
+  </p>
+
+  <div class="buttons">
+
+    <a
+      href="https://wa.me/255700000000"
+      class="btn btn-primary">
+      Chat on WhatsApp
+    </a>
+
+    <a
+      href="mailto:info@untoldbeautyadventures.com"
+      class="btn btn-outline">
+      Email Us
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-grid">
+
+    <div>
+
+      <h3>Untold Beauty Adventures</h3>
+
+      <p>
+        Discover Tanzania through unforgettable mountain,
+        wildlife, beach and cultural experiences.
+      </p>
+
+      <br>
+
+      <p>
+        Tanzania • East Africa
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>Our Experiences</h3>
+
+      <ul>
+
+        <li><a href="#services">Kilimanjaro Trekking</a></li>
+
+        <li><a href="#services">Mount Meru</a></li>
+
+        <li><a href="#services">Wildlife Safaris</a></li>
+
+        <li><a href="#services">Zanzibar</a></li>
+
+        <li><a href="#services">Cultural Tours</a></li>
+
+      </ul>
+
+    </div>
+
+
+    <div>
+
+      <h3>Contact</h3>
+
+      <p>📍 Tanzania, East Africa</p>
+
+      <p>📱 WhatsApp: +255 XXX XXX XXX</p>
+
+      <p>✉️ info@untoldbeautyadventures.com</p>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 Untold Beauty Adventures.
+    All Rights Reserved.
+
+  </div>
+
+</footer>
+
+</body>
+</html>
